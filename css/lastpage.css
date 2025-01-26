@@ -4,6 +4,8 @@ body {
   font-family: "Inter";
   background-color: #ffffff;
   color: rgb(219, 123, 91);
+  overflow: scroll;
+  
 }
 
 #thankyou {
