@@ -33,12 +33,12 @@ body {
     /* Keep the text centered */
     margin-top: 20px;
     /* Add some space at the top */
-    z-index: 1000;
+    z-index: 800;
     /* Ensure it's above other elements if needed */
     position: relative;
     /* Adjust based on layout needs */
     margin-bottom: 400px;
-    font-size: 50px;
+    font-size: 30px;
 
 
 }
