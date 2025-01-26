@@ -10,11 +10,15 @@ body {
     position: absolute;
     margin-left: 150px;
     transition: 0.5s;
+    margin-bottom: -75px;
+    border: 2px solid rgb(103, 33, 0);
 }
 
 #yesButton {
     position: absolute;
     margin-right: 150px;
+    margin-bottom: -75px;
+    border: 2px solid rgb(103, 33, 0);
 }
 
 .header_text {
@@ -37,8 +41,8 @@ body {
 }
 
 .btn {
-    background-color: #ff91dc;
-    color: rgb(183, 98, 243);
+    background-color: rgb(249, 208, 211);
+    color: rgb(219, 123, 91);
     font-weight: bold;
     padding: 15px 32px;
     text-align: center;
