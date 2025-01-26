@@ -1,41 +1,44 @@
 body {
-    text-align: center;
-    margin-top: 30px;
-    font-family: "Inter";
-    background-color: #ffffff;
-    color: #ff9494;
-  }
-  #thankyou {
-    font-size: 50px;
-    margin-bottom: 20px;
-  }
-  .rizz {
-    margin-bottom: 10 px;
-  }
-  .button {
-    padding: 10px 20px;
-    font-size: 18px;
-    cursor: pointer;
-    position: absolute;
-    margin-right: 150px;
-    margin-bottom: -75px;
-    border: 2px solid rgb(103, 33, 0);
-    font-family: "Inter";
-    margin-bottom: 20px;
-    background-color: rgb(249, 208, 211);
-    color: rgb(219, 123, 91);
-    border: 2px solid #ffe3e1;
-    box-shadow: 1px 1px 2px #ff9494;
-    transition: 0.3s;
-  }
-  
-  .button:hover {
-    background-color: #ffffff;
-    color: #ffe3e1;
-   
-    
-    position: absolute;
-    margin-right: 150px;
-    margin-bottom: -75px;
-    border: 2px solid rgb(103, 33, 0);
-  }
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Inter";
+  background-color: #ffffff;
+  color: #ff9494;
+}
+
+#thankyou {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+
+.rizz {
+  margin-bottom: 10 px;
+}
+
+.button {
+  padding: 10px 20px;
+  font-size: 18px;
+  cursor: pointer;
+  position: absolute;
+  margin-right: 150px;
+  margin-bottom: -75px;
+  border: 2px solid rgb(103, 33, 0);
+  font-family: "Inter";
+  margin-bottom: 20px;
+  background-color: rgb(249, 208, 211);
+  color: rgb(219, 123, 91);
+  border: 2px solid #ffe3e1;
+  box-shadow: 1px 1px 2px #ff9494;
+  transition: 0.3s;
+}
+
+.button:hover {
+  background-color: #ffffff;
+  color: #ffe3e1;
+
+
+  position: absolute;
+  margin-right: 150px;
+  margin-bottom: -75px;
+  border: 2px solid rgb(103, 33, 0);
+}

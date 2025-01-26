@@ -1,74 +1,74 @@
 body {
-    text-align: center;
-    margin-top: 30px;
-    font-family: "Inter";
-    background-color: #ffffff;
-    color: #ff9494;
-    display: flex;
-    flex-direction: column;
-  }
+  text-align: center;
+  margin-top: 30px;
+  font-family: "Inter";
+  background-color: #ffffff;
+  color: #ff9494;
+  display: flex;
+  flex-direction: column;
+}
 
-  h1 {
-    font-family: 'Inter';
-    font-size: 40px;
-    font-weight: bold;
-    color: rgb(103, 33, 0);
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0;
-  }
+h1 {
+  font-family: 'Inter';
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(103, 33, 0);
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+form .header {
+  width: 100%;
+  display: flex;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #ff9494;
+}
+
+.form-group {
+  font-family: 'Inter';
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(103, 33, 0);
+  text-align: center;
+
+  align-items: center;
+  margin-bottom: 20%;
+}
+
+.button {
+  padding: 15px 32px;
+  font-size: 15px;
+  cursor: pointer;
+  font-family: "Inter";
+  background-color: rgb(249, 208, 211);
+  color: rgb(219, 123, 91);
+  transition: 0.3s;
+  margin-bottom: 20%;
+
+  border: 2px solid rgb(103, 33, 0);
+  font-weight: bold;
+  align-items: center;
+}
+
+.button:hover {
+  background-color: rgb(249, 208, 211);
+  color: rgb(255, 227, 225);
+  border: 2px solid rgb(103, 33, 0);
+}
+
+input[type="date"] {
+  padding: 15px 32px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  font-family: "Inter";
   
-  form .header {
-    width: 100%;
-    display: flex;
-    font-size: 20px;
-    margin-bottom: 20px;
-    color: #ff9494;
-  }
-  
-  .form-group {
-    font-family: 'Inter';
-    font-size: 40px;
-    font-weight: bold;
-    color: rgb(103, 33, 0);
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0;
-  }
-  
-  .button {
-    padding: 15px 32px;
-    font-size: 15px;
-    cursor: pointer;
-    font-family: "Inter";
-    background-color: rgb(249, 208, 211);
-    color: rgb(219, 123, 91);
-    transition: 0.3s;
-    position: absolute;
-    margin-top: 70px;
-    margin-left: -135px;
-    border: 2px solid rgb(103, 33, 0);
-    font-weight: bold;
-  }
-  
-  .button:hover {
-    background-color: rgb(249, 208, 211);
-    color: rgb(255, 227, 225);
-    border: 2px solid rgb(103, 33, 0);
-  }
-  
-  input[type="date"] {
-    padding: 15px 32px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    cursor: pointer;
-    margin-top: 70px;
-    margin-left: -135px;
-    font-family: "Inter";
-   
-    background-color: rgb(249, 208, 211);
-    color: rgb(219, 123, 91);
-    border: 2px solid rgb(103, 33, 0);
-    transition: background-color 0.3s ease;
-  }
+  background-color: rgb(249, 208, 211);
+  color: rgb(219, 123, 91);
+  border: 2px solid rgb(103, 33, 0);
+  transition: background-color 0.3s ease;
+}
