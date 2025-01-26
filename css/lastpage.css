@@ -8,21 +8,22 @@ body {
   
 }
 .scroll { 
-  /* enable div scrolling */ 
+  
   overflow: scroll; 
   height: 8%; 
-  background-color: aqua; 
+  
   border: 1px black solid; 
-  padding: 2%; 
-  width: 300px; 
-  margin: 0 auto; 
+  padding-bottom: 50px;
+  width: 90%;
+  margin: auto; 
   white-space: nowrap; 
-  font-size: large; 
 }
 
 #thankyou {
   font-size: 30px;
   margin-bottom: 20px;
+
+
 }
 
 .rizz {
