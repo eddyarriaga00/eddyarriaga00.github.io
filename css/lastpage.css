@@ -3,11 +3,11 @@ body {
   margin-top: 30px;
   font-family: "Inter";
   background-color: #ffffff;
-  color: #ff9494;
+  color: rgb(219, 123, 91);
 }
 
 #thankyou {
-  font-size: 50px;
+  font-size: 30px;
   margin-bottom: 20px;
 }
 
