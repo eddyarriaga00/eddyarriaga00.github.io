@@ -1,0 +1,52 @@
+body {
+    text-align: center;
+    margin-top: 30px;
+    font-family: "Inter";
+    background-color: #ffffff;
+    
+    color: rgb(219, 123, 91);
+  }
+  #activityquestion {
+    font-size: 50px;
+    margin-bottom: 30px;
+    font-family: 'Inter';
+    
+    color: rgb(103, 33, 0);
+    text-align: center;
+    font-weight: bold;
+  }
+  .activity-item {
+    display: inline-block;
+    margin: 10px;
+    vertical-align: top;
+    
+    color: rgb(103, 33, 0);
+  }
+  .activity-item img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid rgb(103, 33, 0);
+    object-fit: cover;
+    padding: 10px;
+  }
+  .activity-item label {
+    display: block;
+  }
+  .button {
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    font-family: "Inter";
+    margin-bottom: 20px;
+    background-color: rgb(249, 208, 211);
+    color: rgb(219, 123, 91);
+    border: 2px solid rgb(103, 33, 0);
+  }
+
+  .button:hover {
+    background-color: rgb(249, 208, 211);
+    color: rgb(255, 227, 225);
+    border: 2px solid rgb(103, 33, 0);
+  }

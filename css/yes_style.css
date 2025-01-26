@@ -1,0 +1,57 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+
+.header_text {
+    font-family: 'Inter';
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(103, 33, 0);
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+
+#button3 {
+    position: absolute;
+   
+    
+    border: 2px solid rgb(103, 33, 0);
+    font-family: 'Inter';
+    text-align: center;
+    padding: 15px 32px;
+    background-color: rgb(249, 208, 211);
+    color: rgb(219, 123, 91);
+    font-weight: bold;
+    
+    font-size: 16px;
+    
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 0;
+    bottom:10%;
+    right:75%;
+   
+    
+    
+
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.gif_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
