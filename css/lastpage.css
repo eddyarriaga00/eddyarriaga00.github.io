@@ -5,17 +5,17 @@ body {
   background-color: #ffffff;
   color: rgb(219, 123, 91);
   overflow: scroll;
-  
- 
-  
-  overflow: scroll; 
-  height: 8%; 
-  
-   
+
+
+
+  overflow: scroll;
+  height: 8%;
+
+
   padding-bottom: 50px;
   width: 90%;
-  margin: auto; 
-  
+  margin: auto;
+
 }
 
 #thankyou {
@@ -55,4 +55,10 @@ body {
   margin-right: 150px;
   margin-bottom: -75px;
   border: 2px solid rgb(103, 33, 0);
+}
+
+.gif_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
