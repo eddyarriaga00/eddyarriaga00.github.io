@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  margin-top: 100px;
+  margin-top: -100px;
   font-family: "Inter";
   background-color: #ffffff;
   color: #ff9494;
@@ -70,7 +70,6 @@ input[type="date"] {
   border: 2px solid rgb(103, 33, 0);
   transition: background-color 0.3s ease;
 }
-
 
 .gif_container img{
   height: 200px;
