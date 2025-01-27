@@ -53,8 +53,6 @@ form .header {
 }
 
 .button:hover {
-  background-color: rgb(249, 208, 211);
-  color: rgb(255, 227, 225);
   border: 2px solid rgb(103, 33, 0);
 }
 

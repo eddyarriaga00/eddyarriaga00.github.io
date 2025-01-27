@@ -6,21 +6,20 @@ body {
   color: rgb(219, 123, 91);
   overflow: scroll;
   
-}
-.scroll { 
+ 
   
   overflow: scroll; 
   height: 8%; 
   
-  border: 1px black solid; 
+   
   padding-bottom: 50px;
   width: 90%;
   margin: auto; 
-  white-space: nowrap; 
+  
 }
 
 #thankyou {
-  font-size: 30px;
+  font-size: 25x;
   margin-bottom: 20px;
 
 
