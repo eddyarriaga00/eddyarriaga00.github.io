@@ -3,12 +3,21 @@ const ctx = canvas.getContext('2d');
 
 // Load images
 const playerImage = new Image();
-playerImage.src = 'stick-figure.png'; // Replace with your stick figure image
+playerImage.src = '/end-lessrunner/stickfigure.webp'; // Replace with your stick figure image
+
+
+
+
+
+
+
+
+
 
 const obstacleImages = [
-    'rock.png', // Replace with your rock image
-    'tree.png', // Replace with your tree image
-    'hill.png'  // Replace with your hill image
+    '/end-lessrunner/rock.jpeg', // Replace with your rock image
+    '/end-lessrunner/tree.jpeg', // Replace with your tree image
+    '/end-lessrunner/hill.png'  // Replace with your hill image
 ].map(src => {
     const img = new Image();
     img.src = src;
@@ -41,6 +50,23 @@ const deathsDisplay = document.getElementById('deaths');
 
 // Game state
 let isPaused = false;
+
+// Start screen elements
+const startScreen = document.getElementById('startScreen');
+const gameScreen = document.getElementById('gameScreen');
+const startButton = document.getElementById('startButton');
+
+// Show start screen initially
+startScreen.style.display = 'block';
+gameScreen.style.display = 'none';
+
+// Start the game when the start button is clicked
+startButton.addEventListener('click', () => {
+    startScreen.style.display = 'none';
+    gameScreen.style.display = 'block';
+    resetGame();
+    draw();
+});
 
 // Draw player
 function drawPlayer() {
@@ -158,6 +184,3 @@ document.addEventListener('keydown', (event) => {
 });
 
 document.getElementById('pauseButton').addEventListener('click', togglePause);
-
-// Start the game
-draw();

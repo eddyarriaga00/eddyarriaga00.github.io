@@ -9,14 +9,36 @@ body {
     margin: 0;
 }
 
-h1 {
+#startScreen {
+    text-align: center;
+}
+
+#startScreen h1 {
     color: #333;
     margin-bottom: 10px;
 }
 
-p {
+#startScreen p {
     color: #666;
-    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#startButton {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#startButton:hover {
+    background-color: #f50057;
+}
+
+#gameScreen {
+    text-align: center;
 }
 
 #gameCanvas {

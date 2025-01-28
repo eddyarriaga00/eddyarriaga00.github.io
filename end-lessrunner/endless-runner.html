@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Endless Runner</title>
-    <link rel="stylesheet" href="endless-runner.css">
+    <link rel="stylesheet" href="/end-lessrunner/endless-runner.css">
 </head>
 <body>
-    <h1>Endless Runner</h1>
-    <button id="pauseButton">Pause</button>
-    <canvas id="gameCanvas" width="480" height="320"></canvas>
-    <p>Press SPACE to jump!</p>
-    <p>Score: <span id="score">0</span> | Deaths: <span id="deaths">0</span></p>
-    <script src="endless-runner.js"></script>
+    <div id="startScreen">
+        <h1>Welcome to Endless Runner!</h1>
+        <p>Jump over obstacles and score as many points as you can.</p>
+        <button id="startButton">Start Game</button>
+    </div>
+    <div id="gameScreen" style="display: none;">
+        <h1>Endless Runner</h1>
+        <button id="pauseButton">Pause</button>
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        <p>Press SPACE to jump!</p>
+        <p>Score: <span id="score">0</span> | Deaths: <span id="deaths">0</span></p>
+    </div>
+    <script src="/end-lessrunner/endless-runner.js"></script>
 </body>
 </html>
