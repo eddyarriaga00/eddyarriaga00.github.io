@@ -1,13 +1,26 @@
 const canvas = document.getElementById('gameCanvas');
 const ctx = canvas.getContext('2d');
 
+// Load images
+const playerImage = new Image();
+playerImage.src = 'stick-figure.png'; // Replace with your stick figure image
+
+const obstacleImages = [
+    'rock.png', // Replace with your rock image
+    'tree.png', // Replace with your tree image
+    'hill.png'  // Replace with your hill image
+].map(src => {
+    const img = new Image();
+    img.src = src;
+    return img;
+});
+
 // Player properties
 const player = {
     x: 50,
     y: canvas.height - 60,
-    width: 20,
-    height: 40,
-    color: '#000000',
+    width: 30,
+    height: 50,
     dy: 0,
     gravity: 0.6,
     jumpStrength: -10,
@@ -26,44 +39,18 @@ let deaths = 0;
 const scoreDisplay = document.getElementById('score');
 const deathsDisplay = document.getElementById('deaths');
 
-// Draw stick figure player
+// Game state
+let isPaused = false;
+
+// Draw player
 function drawPlayer() {
-    ctx.strokeStyle = player.color;
-    ctx.lineWidth = 2;
-
-    // Body
-    ctx.beginPath();
-    ctx.moveTo(player.x + player.width / 2, player.y);
-    ctx.lineTo(player.x + player.width / 2, player.y + player.height);
-    ctx.stroke();
-
-    // Legs
-    ctx.beginPath();
-    ctx.moveTo(player.x + player.width / 2, player.y + player.height);
-    ctx.lineTo(player.x, player.y + player.height + 20);
-    ctx.moveTo(player.x + player.width / 2, player.y + player.height);
-    ctx.lineTo(player.x + player.width, player.y + player.height + 20);
-    ctx.stroke();
-
-    // Arms
-    ctx.beginPath();
-    ctx.moveTo(player.x + player.width / 2, player.y + player.height / 2);
-    ctx.lineTo(player.x, player.y + player.height / 2 + 10);
-    ctx.moveTo(player.x + player.width / 2, player.y + player.height / 2);
-    ctx.lineTo(player.x + player.width, player.y + player.height / 2 + 10);
-    ctx.stroke();
-
-    // Head
-    ctx.beginPath();
-    ctx.arc(player.x + player.width / 2, player.y - 10, 10, 0, Math.PI * 2);
-    ctx.stroke();
+    ctx.drawImage(playerImage, player.x, player.y, player.width, player.height);
 }
 
 // Draw obstacles
 function drawObstacles() {
-    ctx.fillStyle = '#FF0000';
     obstacles.forEach((obstacle, index) => {
-        ctx.fillRect(obstacle.x, obstacle.y, obstacle.width, obstacle.height);
+        ctx.drawImage(obstacle.image, obstacle.x, obstacle.y, obstacle.width, obstacle.height);
         obstacle.x -= obstacleSpeed;
 
         // Remove obstacle if off screen
@@ -89,12 +76,15 @@ function drawObstacles() {
 
 // Spawn obstacles
 function spawnObstacle() {
-    const height = Math.random() * 20 + 20; // Shorter obstacles
+    const image = obstacleImages[Math.floor(Math.random() * obstacleImages.length)];
+    const height = Math.random() * 30 + 30; // Random height
+    const width = height; // Keep aspect ratio
     obstacles.push({
         x: canvas.width,
         y: canvas.height - height,
-        width: 20,
-        height: height
+        width: width,
+        height: height,
+        image: image
     });
 }
 
@@ -114,6 +104,8 @@ function resetGame() {
     obstacles.length = 0;
     frameCount = 0;
     spawnRate = 100;
+    score = 0;
+    scoreDisplay.textContent = score;
 }
 
 // Update player position
@@ -129,8 +121,19 @@ function updatePlayer() {
     }
 }
 
+// Pause the game
+function togglePause() {
+    isPaused = !isPaused;
+    document.getElementById('pauseButton').textContent = isPaused ? 'Resume' : 'Pause';
+    if (!isPaused) {
+        draw(); // Resume the game loop
+    }
+}
+
 // Main game loop
 function draw() {
+    if (isPaused) return; // Stop the game loop if paused
+
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     drawPlayer();
@@ -147,12 +150,14 @@ function draw() {
     requestAnimationFrame(draw);
 }
 
-// Jump on spacebar
+// Event listeners
 document.addEventListener('keydown', (event) => {
     if (event.code === 'Space') {
         jump();
     }
 });
+
+document.getElementById('pauseButton').addEventListener('click', togglePause);
 
 // Start the game
 draw();
