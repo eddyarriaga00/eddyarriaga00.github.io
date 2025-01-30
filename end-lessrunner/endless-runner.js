@@ -5,15 +5,6 @@ const ctx = canvas.getContext('2d');
 const playerImage = new Image();
 playerImage.src = '/end-lessrunner/stickfigure.webp'; // Replace with your stick figure image
 
-
-
-
-
-
-
-
-
-
 const obstacleImages = [
     '/end-lessrunner/rock.jpeg', // Replace with your rock image
     '/end-lessrunner/tree.jpeg', // Replace with your tree image
@@ -31,8 +22,8 @@ const player = {
     width: 30,
     height: 50,
     dy: 0,
-    gravity: 0.6,
-    jumpStrength: -10,
+    gravity: 0.4, // Reduced gravity for higher jump
+    jumpStrength: -12, // Increased jump strength
     grounded: false
 };
 
@@ -50,6 +41,7 @@ const deathsDisplay = document.getElementById('deaths');
 
 // Game state
 let isPaused = false;
+let gameStarted = false;
 
 // Start screen elements
 const startScreen = document.getElementById('startScreen');
@@ -65,6 +57,7 @@ startButton.addEventListener('click', () => {
     startScreen.style.display = 'none';
     gameScreen.style.display = 'block';
     resetGame();
+    gameStarted = true;
     draw();
 });
 
@@ -151,7 +144,7 @@ function updatePlayer() {
 function togglePause() {
     isPaused = !isPaused;
     document.getElementById('pauseButton').textContent = isPaused ? 'Resume' : 'Pause';
-    if (!isPaused) {
+    if (!isPaused && gameStarted) {
         draw(); // Resume the game loop
     }
 }
@@ -181,6 +174,11 @@ document.addEventListener('keydown', (event) => {
     if (event.code === 'Space') {
         jump();
     }
+});
+
+// Touch support for mobile devices
+canvas.addEventListener('touchstart', () => {
+    jump();
 });
 
 document.getElementById('pauseButton').addEventListener('click', togglePause);

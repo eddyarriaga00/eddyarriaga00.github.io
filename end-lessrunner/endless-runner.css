@@ -7,6 +7,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin: 0;
+    overflow: hidden; /* Prevent scrolling on mobile */
 }
 
 #startScreen {
@@ -44,10 +45,12 @@ body {
 #gameCanvas {
     background-color: #f0f0f0;
     border: 2px solid #333;
+    max-width: 100%; /* Ensure canvas fits on mobile */
+    height: auto;
 }
 
 #pauseButton {
-    position: absolute;
+    position: fixed;
     top: 20px;
     right: 20px;
     padding: 10px 20px;
@@ -61,4 +64,17 @@ body {
 
 #pauseButton:hover {
     background-color: #f50057;
+}
+
+@media (max-width: 600px) {
+    #gameCanvas {
+        width: 100%;
+        height: auto;
+    }
+    #pauseButton {
+        top: 10px;
+        right: 10px;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
 }
