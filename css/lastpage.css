@@ -1,64 +1,70 @@
 body {
   text-align: center;
-  margin-top: 30px;
+  margin: 0;
   font-family: "Inter";
   background-color: #ffffff;
   color: rgb(219, 123, 91);
-  overflow: scroll;
-
-
-
-  overflow: scroll;
-  height: 8%;
-
-
-  padding-bottom: 50px;
-  width: 90%;
-  margin: auto;
-
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
 }
 
 #thankyou {
-  font-size: 25x;
+  font-size: 1.5rem;
   margin-bottom: 20px;
-
-
+  max-width: 800px;
+  line-height: 1.6;
 }
 
-.rizz {
-  margin-bottom: 10 px;
+.flower {
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.button {
-  padding: 10px 20px;
-  font-size: 18px;
-  cursor: pointer;
-  position: absolute;
-  margin-right: 150px;
-  margin-bottom: -75px;
-  border: 2px solid rgb(103, 33, 0);
-  font-family: "Inter";
-  margin-bottom: 20px;
+.button-container {
+  margin-top: 20px;
+}
+
+.btn {
   background-color: rgb(249, 208, 211);
   color: rgb(219, 123, 91);
-  border: 2px solid #ffe3e1;
-  box-shadow: 1px 1px 2px #ff9494;
-  transition: 0.3s;
-}
-
-.button:hover {
-  background-color: #ffffff;
-  color: #ffe3e1;
-
-
-  position: absolute;
-  margin-right: 150px;
-  margin-bottom: -75px;
+  font-weight: bold;
+  padding: 15px 32px;
+  font-size: 1rem;
   border: 2px solid rgb(103, 33, 0);
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.gif_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.btn:hover {
+  background-color: rgb(255, 182, 193);
+  transform: scale(1.05);
+}
+
+@media only screen and (max-width: 768px) {
+  #thankyou {
+      font-size: 1.2rem;
+  }
+
+  .btn {
+      padding: 12px 24px;
+      font-size: 0.9rem;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #thankyou {
+      font-size: 1rem;
+  }
+
+  .btn {
+      padding: 10px 20px;
+      font-size: 0.8rem;
+  }
 }
