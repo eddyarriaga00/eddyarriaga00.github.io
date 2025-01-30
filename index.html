@@ -38,13 +38,20 @@
         function moveButton() {
             const noButton = document.getElementById('noButton');
             const container = document.querySelector('.container');
-            const maxX = container.clientWidth - noButton.offsetWidth;
-            const maxY = container.clientHeight - noButton.offsetHeight;
+
+            const viewportWidth = window.innerWidth;
+            const viewportHeight = window.innerHeight;
+
+            const buttonWidth = noButton.offsetWidth;
+            const buttonHeight = noButton.offsetHeight;
+
+            const maxX = viewportWidth - buttonWidth;
+            const maxY = viewportHeight - buttonHeight;
 
             const randomX = Math.random() * maxX;
             const randomY = Math.random() * maxY;
 
-            noButton.style.position = 'absolute';
+            noButton.style.position = 'fixed'; // Use 'fixed' to ensure it stays within the viewport
             noButton.style.left = `${randomX}px`;
             noButton.style.top = `${randomY}px`;
         }
