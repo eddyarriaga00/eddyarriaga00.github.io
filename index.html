@@ -14,7 +14,7 @@
             <source src="../Late-at-Night(chosic.com).mp3" type="audio/mpeg" />
             Your browser does not support the audio element.
         </audio>
- 
+
         <div class="header">
             <h1 class="header_text">Wanna be my valentines, Jojo love?</h1>
             <h1 class="header_text">Deez Nutz! On ya Chin</h1>
@@ -26,7 +26,7 @@
 
         <div class="buttons">
             <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-            <button class="btn" id="noButton" onmouseover="moveButton()" onclick="moveButton()">No</button>
+            <button class="btn" id="noButton" onclick="moveButton()">No</button>
         </div>
     </div>
 
@@ -36,10 +36,17 @@
         }
 
         function moveButton() {
-            var x = Math.random() * (window.innerWidth - document.getElementById('noButton').offsetWidth);
-            var y = Math.random() * (window.innerHeight - document.getElementById('noButton').offsetHeight);
-            document.getElementById('noButton').style.left = `${x}px`;
-            document.getElementById('noButton').style.top = `${y}px`;
+            const noButton = document.getElementById('noButton');
+            const container = document.querySelector('.container');
+            const maxX = container.clientWidth - noButton.offsetWidth;
+            const maxY = container.clientHeight - noButton.offsetHeight;
+
+            const randomX = Math.random() * maxX;
+            const randomY = Math.random() * maxY;
+
+            noButton.style.position = 'absolute';
+            noButton.style.left = `${randomX}px`;
+            noButton.style.top = `${randomY}px`;
         }
     </script>
 </body>

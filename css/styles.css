@@ -57,8 +57,12 @@ body {
     transform: scale(1.05);
 }
 
+#yesButton {
+    margin-right: 10px;
+}
+
 #noButton {
-    position: absolute;
+    margin-left: 10px;
 }
 
 audio {
@@ -89,11 +93,7 @@ audio {
     }
 
     .buttons {
-        flex-direction: column;
+        flex-direction: row;
         gap: 10px;
-    }
-
-    #noButton {
-        position: static;
     }
 }
