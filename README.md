@@ -10,9 +10,7 @@ This site is my love to you
 - Hosted on **GitHub Pages**
 
 ## 🎯 License (Kind of)
-This project is:
-- **100% personal**: No stealing my love for Jojo
-- **For Jojo’s eyes only**: Unless you share it 😉
+This project is **private**
 
 ## 🌹 Final Words
 Jojo, this is just one of the many ways I want to remind you how much I love you 💕
